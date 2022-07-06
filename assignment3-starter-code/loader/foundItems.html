@@ -1,0 +1,11 @@
+<div class="card-container">
+    <div class="card" ng-repeat="items in foundItem">
+        <div class="card-body">
+          <h5 class="card-title">{{items.short_name}}</h5>
+          <b class="card-subtitle mb-2 text-muted"><u>Description</u></b>
+          <p class="card-text">{{items.description}}</p>
+          <button class="btn btn-primary" ng-click="onRemove({index : $index})">Don't want these one</button>
+        </div>
+    </div>
+    <b class="warning-message" ng-if="!isListEmpty">Nothing has found! </b>
+</div>
